@@ -1,23 +1,27 @@
 import "./Konyv.css"
-const konyvAdat = {
-    szerzo: "Daniel Keyes",
-    cim: "Virágot Algernonnak",
-    ar: 5500
+import { useState } from "react";
+
+
+
+function Konyv(props){
+
+function kosarbaTesz(){
+    props.megjelenit(props.konyvAdat);
 }
 
-
-function Konyv(){
-
-
-  return (
+  return (<>
+    
     <div className = "konyv">
-        <h3>{konyvAdat.szerzo}</h3>
-        <p>{konyvAdat.cim}</p>
-        <span>ár: {konyvAdat.ar}</span>
-        <button>Kosárba</button>
+        <img src={props.konyvAdat.borito} alt={`${props.konyvAdat.cim} borító`} className="konyv-kep" />
+        <p className = "szerz">{props.konyvAdat.szerzo}</p>
+        <p className = "cim">{props.konyvAdat.cim}</p>
+        <span>ár: {props.konyvAdat.ar}</span>
+        <button onClick={kosarbaTesz}>Kosárba</button>
 
     </div>
+  </>
+    
   )
 }
 
-export default Konyv
+export default Konyv;

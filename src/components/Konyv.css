@@ -1,0 +1,20 @@
+.konyv {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.szerz{
+    font-weight: bold;
+}
+
+.konyv-kep {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+}
+
