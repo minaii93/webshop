@@ -12,11 +12,16 @@ function kosarbaTesz(){
   return (<>
     
     <div className = "konyv">
-        <img src={props.konyvAdat.borito} alt={`${props.konyvAdat.cim} borító`} className="konyv-kep" />
+        <div className="kep">
+            <img src={props.konyvAdat.borito} alt={`${props.konyvAdat.cim} borító`} className="konyv-kep" />
+        </div>
+        <div className="adatok">
         <p className = "szerz">{props.konyvAdat.szerzo}</p>
-        <p className = "cim">{props.konyvAdat.cim}</p>
-        <span>ár: {props.konyvAdat.ar}</span>
-        <button onClick={kosarbaTesz}>Kosárba</button>
+            <p className = "cim">{props.konyvAdat.cim}</p>
+            <span>ár: {props.konyvAdat.ar}</span>
+            <button onClick={kosarbaTesz}>Kosárba</button>
+        </div>
+       
 
     </div>
   </>

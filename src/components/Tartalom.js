@@ -41,6 +41,43 @@ const konyvAdat = [
         cim: "Mester és Margarita",
         ar: 4500,
         borito: "./images/borito6.jpg"
+    },
+    {
+        szerzo: "Mihail Bulgakov",
+        cim: "Mester és Margarita",
+        ar: 4500,
+        borito: "./images/borito6.jpg"
+    },
+    {
+        szerzo: "Mihail Bulgakov",
+        cim: "Mester és Margarita",
+        ar: 4500,
+        borito: "./images/borito6.jpg"
+    },{
+        szerzo: "Daniel Keyes",
+        cim: "Virágot Algernonnak",
+        ar: 5500,
+        borito: "./images/borito4.jpg"
+    },
+    {
+        szerzo: "Sylvia Plath",
+        cim: "Az üvegbúra",
+        ar: 5500,
+        borito: "./images/borito2.jpg"
+    },
+
+    {
+        szerzo: "Ken Kesey",
+        cim: "Száll a kakukk fészkére",
+        ar:6000,
+        borito: "./images/borito5.png"
+    },
+
+    {
+        szerzo: "Fjodor Dosztojevszkij",
+        cim: "Bűn és bűnhődés",
+        ar: 6500,
+        borito: "./images/borito3.jpg"
     }
     
     
@@ -65,11 +102,11 @@ function megjelenit(adat, db){
 }
 
   return (<>
-  <div className = "row ">
-    <div className="kosar col-sm 4">
+  <div className="row">
+    <div className="kosar col-sm-4">
         <p>A kosár tartalma:</p>
         <p>A kosárban {konyvDb} könyv van</p>
-        <table className="table table-striped">
+        <table className="table">
             <thead>
                 <tr>
                     <th>Szerző:</th>
@@ -87,17 +124,20 @@ function megjelenit(adat, db){
             </tbody>
         </table>
     </div>
-    <div className="tartalom col-sm 8">
+    <div className="tartalom col-sm-8">
         {
-            konyvAdat.map((elem,index) => {
-                return (<Konyv 
-                    konyvAdat = {elem} 
-                    key ={index} 
-                    megjelenit = {megjelenit}/>)
+            konyvAdat.map((elem, index) => {
+                return (
+                    <Konyv 
+                        konyvAdat={elem} 
+                        key={index} 
+                        megjelenit={megjelenit}
+                    />
+                );
             })
         }
     </div>
-  </div>
+</div>
   </>
     
   )

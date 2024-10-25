@@ -1,10 +1,13 @@
+
+
 .konyv {
     border: 1px solid #ddd;
-    padding: 15px;
-    background-color: #fff;
+    padding: 10px;
+    background-color: rgb(245, 238, 224);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 7px;
     text-align: center;
+    display: flex;
 }
 
 .szerz{
@@ -15,6 +18,42 @@
     width: 100%; 
     height: auto;
     border-radius: 5px; 
+    
+}
+
+.kep{
+    display: flex;
+    flex: 1;
+    width: 100%; 
+    height: auto;
+    border-radius: 5px; 
     margin-bottom: 10px; 
+    padding: 10px;
+}
+
+.adatok{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+button{
+    border: solid 1px rgb(245, 238, 224);
+    border-radius: 5px;
+    background-color: rgb(67, 35, 55);
+    color: rgb(245, 238, 224);
+    padding: 5px;
+    font-size:small;
+    border-radius: 6px;
+    font:inherit;
+    outline: none; 
+}
+
+button:hover{
+    background-color: rgb(202, 119, 83);
+    color: rgb(245, 238, 224);
+    border: rgb(67, 35, 55);
+    border-radius: 5px;
 }
 
