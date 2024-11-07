@@ -1,32 +1,31 @@
-import "./Konyv.css"
-import { useState } from "react";
+import React, { useContext } from "react";
+import "./Konyv.css";
+import { KosarContext } from "../context/KosarContext";
 
+function Konyv({ konyvAdat }) {
+  const { megjelenit } = useContext(KosarContext);
 
+  const kosarbaTesz = () => {
+    megjelenit(konyvAdat);
+  };
 
-function Konyv(props){
-
-function kosarbaTesz(){
-    props.megjelenit(props.konyvAdat);
-}
-
-  return (<>
-    
-    <div className = "konyv">
-        <div className="kep">
-            <img src={props.konyvAdat.borito} alt={`${props.konyvAdat.cim} borító`} className="konyv-kep" />
-        </div>
-        <div className="adatok">
-        <p className = "szerz">{props.konyvAdat.szerzo}</p>
-            <p className = "cim">{props.konyvAdat.cim}</p>
-            <span>ár: {props.konyvAdat.ar}</span>
-            <button onClick={kosarbaTesz}>Kosárba</button>
-        </div>
-       
-
+  return (
+    <div className="konyv">
+      <div className="kep">
+      <img 
+          src={konyvAdat.borito} 
+          alt={konyvAdat.cim} 
+          className="konyv-kep" 
+        />
+      </div>
+      <div className="adatok">
+        <p className="szerző">{konyvAdat.szerzo}</p>
+        <p className="cim">{konyvAdat.cim}</p>
+        <span>ár: {konyvAdat.ar}</span>
+        <button onClick={kosarbaTesz}>Kosárba</button>
+      </div>
     </div>
-  </>
-    
-  )
+  );
 }
 
 export default Konyv;
